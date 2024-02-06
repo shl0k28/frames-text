@@ -30,12 +30,12 @@ export default async function Home(props: any){
   const [state, dispatch] = useFramesReducer(reducer, { count: 0 }, previousFrame);
 
   return <FrameContainer
-      postUrl="/frames"
+      postUrl="/api/echo"
       state={state}
       previousFrame={previousFrame}
     >
       <FrameImage src="https://picsum.photos/seed/frames.js/1146/600" />
-      <FrameInput text="put some text here" />
-      <FrameButton onClick={dispatch}>Click me</FrameButton>
+      <FrameInput text="Add your ens/base here" />
+      <FrameButton onClick={dispatch}>Tap to Mint</FrameButton>
     </FrameContainer>
 }
